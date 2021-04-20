@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View, Pressable, Alert } from 'react-native';
 import Main from './src/components/Main';
+import TestComponent from './src/components/TestComponent';
 
 
 export default function App() {
@@ -16,7 +17,10 @@ export default function App() {
     //     <Text>You can press me</Text>
     //   </Pressable>
     // </View>
-    <Main />
+    <View>
+      <Main />
+      <TestComponent />
+    </View>
   );
 }
 
