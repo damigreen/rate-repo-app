@@ -3,7 +3,7 @@ import React from 'react';
 import { StyleSheet, Text, View, Pressable, Alert } from 'react-native';
 import Main from './src/components/Main';
 import TestComponent from './src/components/TestComponent';
-
+import BigBlueText from './src/components/BigBlueText';
 
 export default function App() {
   console.log(12334556789073283823672638726873682768372)
@@ -18,8 +18,9 @@ export default function App() {
     //   </Pressable>
     // </View>
     <View>
-      <Main />
-      <TestComponent />
+        <Main />
+        <BigBlueText />
+        <TestComponent />
     </View>
   );
 }
