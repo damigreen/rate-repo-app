@@ -1,7 +1,12 @@
 import React from 'react'
 import Constants from 'expo-constants';
-import { Text, StyleSheet, View } from 'react-native'
+import { Text as Txt, StyleSheet, View } from 'react-native'
 import RepositoryList from './RepositoryList';
+import FancyText from './FancyText';
+import Text from './Text';
+import FlexBoxExample from './FlexBoxExample';
+
+
 
 const styles = StyleSheet.create({
   container: {
@@ -13,22 +18,24 @@ const styles = StyleSheet.create({
   },
 });
 
-const BigBlueText = () => {
-  return (
-    <View style={{ padding: 20, marginTop: 20 }}>
-      <Text style={{ color: 'blue', fontSize: 24, fontWeight: '700' }}>
-        Big Blue Text
-      </Text>
-    </View>
-  )
-}
 
 const Main = () => {
   return (
     <View style={styles.container}>
-      <Text>Rate Repository Application</Text>
-      <RepositoryList />
-      <BigBlueText />
+      <Txt>Rate Repository Application</Txt>
+      {/* <RepositoryList /> */}
+
+      <FancyText>Simple text</FancyText>
+      <FancyText isBlue>Blue text</FancyText>
+      <FancyText isBig>Big text</FancyText>
+      <FancyText isBig isBlue>Big Blue Text</FancyText>
+
+      <Text>Simple text</Text>
+      <Text style={{ paddingBottom: 10 } } backgroundColor="orangeBG">Text with custom style</Text>
+      <Text backgroundColor="orangeBG" fontWeight='bold' fontSize="subHeading">Bold subheading</Text>
+      <Text color="textSecondary">Text with secondary color</Text>
+
+      <FlexBoxExample />
     </View>
   )
 }
