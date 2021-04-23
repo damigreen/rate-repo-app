@@ -1,10 +1,13 @@
 import React from 'react'
 import Constants from 'expo-constants';
 import { Text as Txt, StyleSheet, View } from 'react-native'
-import RepositoryList from './RepositoryList';
 import FancyText from './FancyText';
 import Text from './Text';
 import FlexBoxExample from './FlexBoxExample';
+import BigBlueText from './BigBlueText';
+import TestComponent from './TestComponent';
+import { Route, Switch, Redirect } from 'react-router-native';
+
 
 
 
@@ -36,6 +39,14 @@ const Main = () => {
       <Text color="textSecondary">Text with secondary color</Text>
 
       <FlexBoxExample />
+
+      <BigBlueText />
+      <Switch>
+        <Route path="/" exact>
+          <TestComponent />
+        </Route>
+        <Redirect to="/" />
+      </Switch>
     </View>
   )
 }

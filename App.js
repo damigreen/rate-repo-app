@@ -2,8 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View, Pressable, Alert } from 'react-native';
 import Main from './src/components/Main';
-import TestComponent from './src/components/TestComponent';
-import BigBlueText from './src/components/BigBlueText';
+import { NativeRouter } from 'react-router-native';
 
 export default function App() {
   console.log(12334556789073283823672638726873682768372)
@@ -17,11 +16,9 @@ export default function App() {
     //     <Text>You can press me</Text>
     //   </Pressable>
     // </View>
-    <View>
+    <NativeRouter>
         <Main />
-        <BigBlueText />
-        <TestComponent />
-    </View>
+    </NativeRouter>
   );
 }
 
