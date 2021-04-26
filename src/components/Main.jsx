@@ -6,6 +6,7 @@ import Text from './Text';
 import FlexBoxExample from './FlexBoxExample';
 import BigBlueText from './BigBlueText';
 import TestComponent from './TestComponent';
+import BodyMassIndexCalculator from './BodyMassIndexCalculator';
 import { Route, Switch, Redirect } from 'react-router-native';
 
 
@@ -40,13 +41,15 @@ const Main = () => {
 
       <FlexBoxExample />
 
-      <BigBlueText />
+      {/* <BigBlueText /> */}
       <Switch>
         <Route path="/" exact>
           <TestComponent />
         </Route>
         <Redirect to="/" />
       </Switch>
+
+      <BodyMassIndexCalculator />
     </View>
   )
 }
