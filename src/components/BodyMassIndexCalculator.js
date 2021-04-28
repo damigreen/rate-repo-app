@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
 })
 
 const initialValues = {
-  mass: '200',
+  mass: '',
   height: '',
 };
 
